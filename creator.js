@@ -1,6 +1,6 @@
 // Home Page
 $(document).delegate('#CMS','pageinit', function() {
-  $('#new').click(function() {
+	$('#new').click(function() {
 		$('#popupPage').popup( "open" );
 	});
 	
@@ -13,6 +13,7 @@ $(document).delegate('#CMS','pageinit', function() {
 // Creation Page
 $(document).delegate('#creator','pageinit', function() {
 	// Init
+    	document.addEventListener("menubutton", onMenuKeyDown, false);
 	$('#header').hide();
 	$('#save').hide();
 	
@@ -175,8 +176,8 @@ $(document).delegate('#creator','pageinit', function() {
 	// Save
 	$('#save').click(function() {
 		html_head = $('head').html();
-		html_head = html_head.replace('<script src="creator.js" type="text/javascript"></script>', '');	// remove not used tags
-		html_head = html_head.replace('<link rel="stylesheet" href="creator.css">', '');				// remove not used tags
+		html_head = html_head.replace('<script src="js/creator.js" type="text/javascript"></script>', '');	// remove not used tags
+		html_head = html_head.replace('<link rel="stylesheet" href="css/creator.css">', '');				// remove not used tags
 		html_head = '<!DOCTYPE html><html><head>' + html_head + '</head><body>' + $('#screenshot').html() + '</body>' + '</html>';
 		html_head = $.trim(html_head);
 		$('#clipboard').val( html_head );
