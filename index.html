@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script src="cordova-2.2.0.js" type="text/javascript"></script>
+<title></title>
+<script src="creator.js" type="text/javascript"></script>
+<link rel="stylesheet" href="creator.css">
+</head>
+
+<body>
+
+<div id="CMS" data-url="CMS" data-role="page" data-theme="c">
+<div data-role="header" data-theme="c">
+<h1>CMS</h1>
+</div>
+
+<div data-role="content">
+<!-- PageName Edit -->
+  <div data-theme="c" id="popupPage" data-role="popup">
+		<div style="padding:10px 20px;">
+		  <h3>Page name</h3>
+		  <input type="text" data-theme="c" placeholder="name" id="page_name">
+		  
+		  <button id="set_page" data-theme="c">Ok</button>
+		</div>
+	</div>
+<span id="motd"><span style="font-family: Monospace;"><span style="font-family: arial,helvetica,clean,sans-serif;"><h5><h6><span>Thanks for downloading my app!<br>This app was created for learning jquery,<br>and won't be updated or anything,<span style="font-weight: bold;"> <br>be free to do with it whatever you wan't</span></span></h6></h5><p></p></span></span></span>
+
+<ul data-role="listview" data-inset="true">
+<li data-role="list-divider">Menu</li>
+<li><a id="new" href="#">New</a></li>
+</ul>
+<span id="empty"><br><br><br><br><br><br><br><br><br><br><br><br></span>
+<input type="button" value="Exit"/>
+
+</div></div>
+
+<div id="creator" data-url="creator" data-role="page">
+
+<div id="creation" data-role="content">
+	<!-- Popup Panel -->
+	<div data-role="popup" id="popupPanel" data-transition="slide" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+		<a href="#" name="header" class="btn-style ui-shadow ui-corner-all toolpattern">	HEADER	</a>
+		<a href="#" name="input" class="btn-style ui-shadow ui-corner-all toolpattern">		INPUT	</a>
+		<a href="#" name="button" class="btn-style ui-shadow ui-corner-all toolpattern">	BUTTON	</a>
+		<a href="#" name="list" class="btn-style ui-shadow ui-corner-all toolpattern">		LIST	</a>
+		<a href="#" name="content" class="btn-style ui-shadow ui-corner-all toolpattern">	CONTENT	</a>
+	</div>
+	
+	<div id="popupCode" data-role="popup">
+		<div style="padding:10px 20px;">
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<textarea id="clipboard"></textarea>
+		</div>
+	</div>
+	
+	<a id="save" href="#" class="btn-style ui-shadow ui-corner-all toolpattern">Save</a>
+	
+	<!-- Header Edit -->
+	<div data-theme="c" id="popupHeader" data-role="popup">
+		<div style="padding:10px 20px;">
+		  <h3>Customize title</h3>
+		  <input type="text" data-theme="c" placeholder="title" id="header_text">
+		  
+		  <button id="set_header" data-theme="c">Change</button>
+		</div>
+	</div>
+	
+	<!-- Input Edit -->
+	<div data-theme="c" id="popupInput" data-role="popup">
+		<div style="padding:10px 20px;">
+		<h3>Customize Input</h3>
+		<input type="text" data-theme="c" placeholder="placeholder" id="input_place">
+		<p>Theme style:</p>
+		<select id="input_theme" data-native-menu="false" data-theme="c">
+			<option value="a">black</option><option value="b">blue</option><option value="c">metal</option><option value="d">light</option><option value="e">yellow</option>
+		</select>
+		
+		<button id="set_input" data-theme="c">Change</button>
+		</div>
+	</div>
+
+	<!-- Button Edit -->
+	<div data-theme="c" id="popupButton" data-role="popup">
+		<div style="padding:10px 20px;">
+		<h3>Customize Button</h3>
+		<input type="text" data-theme="c" placeholder="button_value" id="button_value">
+		<p>Theme style:</p>
+		<select id="button_theme" data-native-menu="false" data-theme="c">
+			<option value="a">black</option><option value="b">blue</option><option value="c">metal</option><option value="d">light</option><option value="e">yellow</option>
+		</select>
+		
+		<button id="set_button" data-theme="c">Change</button>
+		</div>
+	</div>
+	
+	<!-- List Edit -->
+	<div data-theme="c" id="popupList" data-role="popup">
+		<div style="padding:10px 20px;">
+		<h3>Customize List</h3>
+		<input type="text" data-theme="c" placeholder="list_header" id="list_title">
+		<p>Theme style:</p>
+		<select id="list_theme" data-native-menu="false" data-theme="c">
+			<option value="a">black</option><option selected="selected" value="b">blue</option><option value="c">metal</option><option value="d">light</option><option value="e">yellow</option>
+		</select>
+		<input type="text" data-theme="c" placeholder="list_item" id="list_item">
+		<button id="add_item" data-icon="plus" data-theme="c">Add</button>
+		<p>Preview:</p>
+		<ul id="list_pre" data-role="listview" data-theme="c">
+		</ul>
+		<button id="rem_item" data-icon="delete" data-theme="c">Delete</button>
+		<button id="set_list" data-theme="c">Change</button>
+		</div>
+	</div>
+	
+	<!-- Text Edit -->
+	<div data-theme="c" id="popupContent" data-role="popup">
+		<div style="padding:10px 20px;">
+		<h3>Customize Text</h3>
+		<textarea id="content_text" placeholder="content_text" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-focus"></textarea>
+		<button id="set_text" data-theme="c">Change</button>
+		</div>
+	</div>
+	
+	<div id="screenshot">
+	<div id="simpage" data-url="creator" data-role="page">
+		<div id="header" data-role="header" data-theme="c" class="ui-header ui-bar-c" role="banner">
+			<h1 id="lb_header" class="ui-title" role="heading" aria-level="1">Header</h1>
+		</div>
+		<div id="simcontent" data-role="content">
+			
+		</div>
+	</div>
+	</div>
+	
+	<canvas id="hidden_canvas" style="display: none"/>
+</div></div>
+
+</body>
+</html>
