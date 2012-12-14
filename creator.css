@@ -1,0 +1,58 @@
+.btn-style {
+  display: block;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+	text-shadow: 0 1px 0 white;
+}
+.toolpattern {
+	width: 98px;
+	height: 57.5px;
+	text-align: center;
+	padding-top: 40.5px;
+	border:	1px solid gold;
+	background: rgb(231,231,231); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(231,231,231,1) 0%, rgba(215,215,215,1) 17%, rgba(182,182,182,1) 50%, rgba(167,167,167,1) 51%, rgba(177,177,177,1) 59%, rgba(189,189,189,1) 71%, rgba(167,167,167,1) 84%, rgba(142,142,142,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(231,231,231,1)), color-stop(17%,rgba(215,215,215,1)), color-stop(50%,rgba(182,182,182,1)), color-stop(51%,rgba(167,167,167,1)), color-stop(59%,rgba(177,177,177,1)), color-stop(71%,rgba(189,189,189,1)), color-stop(84%,rgba(167,167,167,1)), color-stop(100%,rgba(142,142,142,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(231,231,231,1) 0%,rgba(215,215,215,1) 17%,rgba(182,182,182,1) 50%,rgba(167,167,167,1) 51%,rgba(177,177,177,1) 59%,rgba(189,189,189,1) 71%,rgba(167,167,167,1) 84%,rgba(142,142,142,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(231,231,231,1) 0%,rgba(215,215,215,1) 17%,rgba(182,182,182,1) 50%,rgba(167,167,167,1) 51%,rgba(177,177,177,1) 59%,rgba(189,189,189,1) 71%,rgba(167,167,167,1) 84%,rgba(142,142,142,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(231,231,231,1) 0%,rgba(215,215,215,1) 17%,rgba(182,182,182,1) 50%,rgba(167,167,167,1) 51%,rgba(177,177,177,1) 59%,rgba(189,189,189,1) 71%,rgba(167,167,167,1) 84%,rgba(142,142,142,1) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(231,231,231,1) 0%,rgba(215,215,215,1) 17%,rgba(182,182,182,1) 50%,rgba(167,167,167,1) 51%,rgba(177,177,177,1) 59%,rgba(189,189,189,1) 71%,rgba(167,167,167,1) 84%,rgba(142,142,142,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#8e8e8e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.toolpattern:hover {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.centered {
+	height: 100%;
+	vertical-align: middle;
+}
+#simpage {
+	height: 100%;
+	width:	100%;
+	display: block;
+}
+#save {
+	position: absolute;
+	z-index:  1100;
+}
+#popupPanel-popup {
+    right: 0 !important;
+    left: auto !important;
+}
+#popupPanel {
+    width: 100px;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+    margin: -1px 0;
+}
+#popupPanel .ui-btn {
+    margin: 2em 15px;
+}
